@@ -1,3 +1,5 @@
 #!/bin/bash
 
-echo "Shell Script é demais!";Vou ter muito sucesso na programação
+shell-script-updates
+echo "Shell Script é demais!";Eu sou Tryber e serei um ótimo desenvolvedor de software.
+master
