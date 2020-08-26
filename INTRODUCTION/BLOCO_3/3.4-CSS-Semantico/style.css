@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin:0;
+}
+
+h1 {
+    background-color: #0b5e0f;
+    color: white;
+    height: 60px;
+    text-align: center;
+    margin: auto;
+    line-height: 60px;
+}
