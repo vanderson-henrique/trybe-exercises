@@ -8,3 +8,23 @@ n = 7
  *   *
 *******
  */
+
+
+let n = 7;
+let asterisco = "";
+
+for (let i = 1; i <= n; i += 1){
+     let espaço = "";
+     asterisco += "*";
+     for (let j = (n - i)/2; j >= 1; j -= 1){ 
+         espaço += " ";
+         let espaçoInterno = "";
+         for (let k = (n - i - (j * 2)); k <= 1; k += 1){
+            espaçoInterno = " ";
+         }      
+   }
+
+   if (i % 2 == 1){ 
+     console.log(espaço + asterisco + espaço); 
+   }
+}
