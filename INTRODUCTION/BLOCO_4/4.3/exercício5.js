@@ -10,21 +10,46 @@ n = 7
  */
 
 
-let n = 7;
-let asterisco = "";
+let n = 17;
+let lineInput = [];
+let baseMatrix = [];
+let symbol = "*";
+let matrix = [];
+let left = 1;
+let right = n - 2;
 
-for (let i = 1; i <= n; i += 1){
-     let espaço = "";
-     asterisco += "*";
-     for (let j = (n - i)/2; j >= 1; j -= 1){ 
-         espaço += " ";
-         let espaçoInterno = "";
-         for (let k = (n - i - (j * 2)); k <= 1; k += 1){
-            espaçoInterno = " ";
-         }      
+// resolvendo a base da matriz. Será uma base com o número de asteriscos igual a n
+   for (let linhaColuna = 0; linhaColuna < n; linhaColuna += 1){
+      baseMatrix[linhaColuna] = symbol;
+   }
+matrix[0] = baseMatrix; // colocando o array base dentro do array matrix
+
+   for (lineIndex = 1; lineIndex < n; lineIndex +=1){
+      for ( linhaColuna = 0; linhaColuna < n; linhaColuna += 1){
+         if (linhaColuna === left || linhaColuna === right){
+            lineInput[linhaColuna] = symbol;   
+         }
+         else {
+            lineInput[linhaColuna] = " ";
+         }
+      }
+      matrix[lineIndex] = lineInput;
+      left += 1;
+      right -= 1;
+      lineInput = [];
+      if (left > right){
+         break;
+      }
    }
 
-   if (i % 2 == 1){ 
-     console.log(espaço + asterisco + espaço); 
+   // convertendo array para string
+
+   let result = "";
+
+   for (lineIndex = matrix.length - 1; lineIndex >= 0; lineIndex -= 1){
+      for (linhaColuna = 0; linhaColuna < n; linhaColuna += 1){
+         result += matrix[lineIndex][linhaColuna];
+      }
+      console.log(result);
+      result = "";
    }
-}
