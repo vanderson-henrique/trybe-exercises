@@ -25,7 +25,7 @@ Fazendo a conta, temos: (7,5% de R$ 2.670,00) - R$ 142,80 = R$ 57,45
 O último cálculo para conseguir o salário líquido é R$ 2.670,00 - R$ 57,45 (salário-base - valor IR) = R$ 2.612,55.
 Resultado: R$ 2.612,55.*/
 
-let salarioBruto = 3000;
+let salarioBruto = 5000;
 let salarioBase = null;
 let descontoIRRF = null;
 

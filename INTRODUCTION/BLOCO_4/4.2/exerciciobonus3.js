@@ -12,9 +12,7 @@ Por exemplo: o primeiro valor do novo array deverá ser 45, pois é a multiplica
  let novoNumbers = []; 
  for (let i = 1; i < numbers.length; i += 1){ //Sempre o "i" será o item a frente no array, ele começa na posição 1 para ser multiplicado pelo primeiro item "j".
      for (let j = i - 1; j < i ; j += 1){ // O j será a posição anterior.
-        if (j < numbers.length){ // Enquanto o j for menor que o tamanho do array
             novoNumbers.push(numbers[i]*numbers[j]) // será inserido no novo array o resultado da multiplicação de i por j.
-         }
      }
  }
  novoNumbers.push(numbers[numbers.length-1]*2) // No final, como o j não terá um valor para ser multiplicado, ele cai aqui e faz o cálculo para o ultimo valor do array por 2
