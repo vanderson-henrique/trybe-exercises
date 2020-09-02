@@ -15,11 +15,16 @@ function verificaPalindrome (palavra){
         contrario.push(palavra[i]);
     }
 
-    if ( direito === contrario){
+   // let correta = direito.toString();
+    //let inverso = contrario.toString();
+
+    // console.log(correta);
+    
+    if ( direito.toString() === contrario.toString()){
         console.log(true);
     } else {
         console.log(false);
     }
 } 
 
-verificaPalindrome("arara");
+verificaPalindrome("desenvolvimento");

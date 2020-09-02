@@ -1,3 +1,7 @@
+/*Agora, defina um segundo objeto com a mesma estrutura (as mesmas chaves) do primeiro e os seguintes
+ valores: "Tio Patinhas", "Christmas on Bear Mountain, Dell's Four Color Comics #178", 
+ "O último MacPatinhas", "Sim". */
+
 let info = {
     personagem: "Margarida",
     origem: "Pato Donald",
@@ -13,11 +17,10 @@ let info2 = {
 };
 
 for (let key in info,info2){
+    if (info[key] == "Sim" && info2[key] == "Sim"){
+        console.log(`Ambos recorrentes`);
+    } else {
     console.log(`${info[key]} e ${info2[key]}`);
+}
 } 
-if (info.recorrente == "Sim" && info2.recorrente == "Sim") {
-    console.log("Ambos recorrentes");
-}
-else {
-    console.log(`${info[key]} e ${info2[key]}`);
-}
+

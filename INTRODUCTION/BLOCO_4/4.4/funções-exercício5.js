@@ -24,12 +24,5 @@ function maisRepetido(num){
     console.log(number);
         }
 
-
-
-
-
-
-
-
-maisRepetido([2, 3, 2, 5, 8, 5, 2]);
+        maisRepetido([2, 3, 2, 5, 8, 5, 2]);
 
