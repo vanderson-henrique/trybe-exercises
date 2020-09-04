@@ -5,7 +5,7 @@ let a = 12;
 let b = 12.1;
 let c = 12;
 
-if (a > b) {
+if (a > b && a > c) {
     console.log(a);
 }
 else if (b > c) {
