@@ -46,26 +46,54 @@
         - document.getElementsByTagName()
  Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)*/
 
-document.getElementsByTagName('p')[1].innerText = "Em 2 anos espero estar trabalhando numa boa empresa de tecnologia, tendo adquirido bastante conhecimento na área de desenvolvimento de software e podendo passar pra frente este conhecimento."
+function paragraph() {
+  let paragraph2 = document.getElementsByTagName('p')[1];
+  paragraph2.innerText = "Em 2 anos espero estar trabalhando numa boa empresa de tecnologia, tendo adquirido bastante conhecimento na área de desenvolvimento de software e podendo passar pra frente este conhecimento."
+}
+paragraph();
 
  // Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
 
-document.getElementsByClassName('main-content')[0].style.backgroundColor = 'rgb(76,164,109)';
+function color() {
+  let quadrado = document.getElementsByClassName('main-content')[0];
+  quadrado.style.backgroundColor = 'rgb(76,164,109)';
+}
+color();
 
  // Crie uma função que mude a cor do quadrado vermelho para branco.
 
-document.getElementsByClassName('center-content')[0].style.backgroundColor = 'white';
+function color2() {
+  let quadradoBranco = document.getElementsByClassName('center-content')[0];
+  quadradoBranco.style.backgroundColor = 'white';
+}
+color2();
 
  // Crie uma função que corrija o texto da tag <h1>.
 
-document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - JavaScript';
+function corrigeTexto () {
+  let texto = document.getElementsByTagName('h1')[0];
+  texto.innerText = 'Exercício 5.1 - JavaScript';
+}
+corrigeTexto();
 
  // Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
 
-document.getElementsByTagName('p')[1].innerText = document.getElementsByTagName('p')[1].innerText.toUpperCase();
+function maiusculo () {
+  let textoMaiusculo = document.getElementsByTagName('p')[1];
+  textoMaiusculo.innerText = textoMaiusculo.innerText.toUpperCase();
+}
+maiusculo();
 
  // Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-        
+
+function exibeParagrafo () {
+  let paragrafos = document.getElementsByTagName('p');
+  for (let i = 0; i < paragrafos.length; i += 1){
+  console.log(paragrafos[i].innerText);
+}
+}
+exibeParagrafo();
+
     </script>
   </body>
 </html>
