@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- creating the squares and columns divs -->
+<div id="stack">
+	<div class="column_left"> 
+		<div>
+        	<div>
+			</div>
+    	</div>
+    	<div>
+        	<div></div>
+    	</div>
+ 	</div>
+ 	<div class="column_right">
+    	<div>
+        	<div>	
+			</div>
+    	</div>
+    	<div>
+        	<div>
+			</div>
+    	</div>
+  	</div>
+</div>
+<style>
+
+
+
+#stack{
+	height:20rem;
+	width:20rem;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+	align-items:center;
+	border: solid black 4px;
+}
+
+.column_left, .column_right{
+	
+    height:18rem;
+	width:8rem;
+    margin:auto;
+	display:flex;
+	flex-direction:column;
+    justify-content:space-evenly;
+    border: solid black 4px;
+    }
+.column_left>div, .column_right>div{
+	height:5rem;
+	width:5rem ;
+	display:flex;
+	align-items:center;
+    justify-content:center;
+    margin:auto;
+    border: solid black 4px;
+}  
+
+div>div>div>div{
+    height:2.5rem;
+	width:2.5rem; 
+    border: solid black 4px;
+}
+
+
+
+</style>
+<script>
+
+document.querySelectorAll('#stack')[0].style.background = "red";
+document.querySelector('.column_right').style.background = "green";
+document.querySelector('.column_left').style.background = "rgb(84, 144, 240)";
+document.querySelector('.column_left div').style.background = "rgb(235, 103, 240)";
+document.querySelector('.column_right div').style.background = "rgb(89, 5, 92)";
+document.querySelector('div div div div').style.background = "rgb(231, 209, 232)";
+
+</script>
+
+</body>
+</html>
