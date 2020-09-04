@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="paragrafo1">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class="paragrafo2">Segundo parágrafo!</p>
+
+    <script>
+      var paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+      document.getElementById('page-title').innerText = "Harry Potter" // Recupera o elemento com o ID "page-title" e altera para Harry Potter.
+      document.getElementById("second-paragraph").innerText = "Harry Potter é uma série de sete romances de fantasia escrita pela autora britânica J. K. Rowling. A série narra as aventuras de um jovem chamado Harry James Potter, que descobre aos 11 anos de idade que é um bruxo ao ser convidado para estudar na Escola de Magia e Bruxaria de Hogwarts." // Recupera e altera o que está com a ID "second-paragraph".
+      document.getElementById('subtitle').innerText = 'Gêneros: Literatura fantástica, Drama, Ficção juvenil, Mistério, Suspense, Bildungsroman.'
+      document.getElementsByClassName('paragrafo1')[0].style.color = "green";
+      document.getElementsByTagName('h4')[0].innerText = "Novo Subtítulo";
+
+      document.querySelector("#page-title").innerText = "Harry Potter 2"; // Usando o querySelector para alterar o conteúdo daquele ID.
+
+      document.querySelectorAll(".paragrafo1")[0].innerText = "Texto com querySelectorAll"; // Alterando o primeiro parágrafo 1 de determinada classe através do queryselectorAll.
+
+      document.querySelectorAll('h4')[0].innerText = "Mudando de novo"; // para tags não precisa de seletor como # e .
+
+
+    </script>
+  </body>
+</html>
