@@ -72,7 +72,7 @@
 
       let div2 = document.createElement('div');
       div2.className = 'center-content';
-      document.querySelector('.main-content').appendChild(div2);
+      div.appendChild(div2);
 
       //4 - Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
 
@@ -84,7 +84,7 @@
 
       let div3 = document.createElement('div');
       div3.className = 'left-content';
-      document.querySelector('.main-content').appendChild(div3);
+      div.appendChild(div3);
 
       //6 - Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
 
@@ -97,8 +97,29 @@
       let image = document.createElement('img');
       image.className = 'small-image';
       image.src = 'https://picsum.photos/200';
-      document.querySelector('.left-content').appendChild(image);
+      div3.appendChild(image);
 
+      //8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+
+      let lista = document.createElement('ul');
+      const numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      for (let i = 0; i < numbers.length; i += 1){
+        let inclusao = document.createElement('li');
+        inclusao.innerText = numbers[i];
+        lista.appendChild(inclusao);
+      }
+
+      div4.appendChild(lista);
+
+      //9 - Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
+
+      let h3;
+      for (let i = 0; i < 3; i += 1){
+        h3 = document.createElement('h3');
+        div.appendChild(h3);
+      }
+
+    
 
     </script>
   </body>
