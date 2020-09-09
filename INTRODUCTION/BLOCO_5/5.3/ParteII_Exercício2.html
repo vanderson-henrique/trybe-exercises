@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+</head>
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+  <br><br>
+  <div id="solution"></div>
+<script>
+/*Adicione uma tag de script e adicione as funções do exercício da calculadora (veja a solução se ainda não tiver feito isso).
+Para cada operação, crie um ouvinte de evento para o botão e, quando ele for clicado, encontre o valor da entrada apropriada e mostre o resultado do cálculo na solução div.
+Bônus: responde aos pressionamentos de tecla para que o usuário não precise clicar no botão.*/
+
+function squareNumber (num) { 
+    var squaredNumber = num * num;  
+    return `O quadrado do número ${num} é ${squaredNumber}.`; 
+} 
+
+    let buttonSquareNumber = document.querySelector('#square-button');
+    buttonSquareNumber.addEventListener("click", function(){
+        let num = document.querySelector("#square-input").value;
+        document.querySelector("#solution").innerText = squareNumber(num);
+    });
+    
+
+function halfOf (num) { 
+    var half = num / 2; 
+    return `A Metade de ${num} é ${half}.`; 
+} 
+
+    let buttonHalf = document.querySelector('#half-button');
+    buttonHalf.addEventListener("click", function(){
+        let num = document.querySelector('#half-input').value;
+        document.querySelector('#solution').innerText = halfOf(num);
+    })
+
+function percentOf (num1, num2) { 
+    var percent = (num1 / num2) * 100; 
+    return `${num1} é ${percent}% de ${num2}`; 
+} 
+
+let buttonPercent = document.querySelector("#percent-button");
+buttonPercent.addEventListener("click", function(){
+    let num1 = document.querySelector('#percent1-input').value;
+    let num2 = document.querySelector('#percent2-input').value;
+    document.querySelector('#solution').innerText = percentOf(num1, num2);
+})
+
+function areaOfCircle (radius) { 
+    var area = Math.PI * (radius * radius); 
+    return `A área do círculo com o raio ${radius} é ${area}`; 
+} 
+    
+    let buttonArea = document.querySelector('#area-button');
+    buttonArea.addEventListener("click", function(){
+        let radius = document.querySelector('#area-input').value;
+        document.querySelector('#solution').innerText = areaOfCircle(radius);
+})
+
+
+
+</script>
+  
+</body>
+</html>
