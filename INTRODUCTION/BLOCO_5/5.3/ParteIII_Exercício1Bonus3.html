@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Cat Walk</title>
+ </head>
+ <body>
+  
+  <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+  <script>
+ // Bônus # 3 : quando o gato chegar ao meio da tela, substitua o img por uma imagem de um gato dançando, mantenha-o dançando por 10 segundos e, em seguida, substitua o img pela imagem original e faça com que ele continue a caminhada.
+      let imageCat = document.querySelector('img');
+      imageCat.style.marginLeft = '0px';
+      let indo = true;
+      
+      function catWalk(){
+        if (indo) {
+          imageCat.style.marginLeft = parseInt(imageCat.style.marginLeft) + 10 + 'px';
+        }
+        if (parseInt(imageCat.style.marginLeft) >= window.innerWidth){ 
+          indo = false; // atribui falso quando ele atingir o fim da tela
+        }
+        if (!indo){    
+            imageCat.style.marginLeft = parseInt(imageCat.style.marginLeft) - 10 + 'px';
+          }
+        if (parseInt(imageCat.style.marginLeft) <= 0){
+          indo = true; // atribui verdadeiro quando ele atingir o fim da tela
+        }
+        }         
+      setInterval(catWalk, 50); // chama a função catWalk a cada 50 milissegundos
+
+      // https://gifman.net/wp-content/uploads/2019/06/gato-legal-fofo-07.gif (gif para inserir)
+
+
+  </script>
+ </body>
+</html>
