@@ -12,24 +12,34 @@
       let imageCat = document.querySelector('img');
       imageCat.style.marginLeft = '0px';
       let indo = true;
-      
-      function catWalk(){
-        if (indo) {
-          imageCat.style.marginLeft = parseInt(imageCat.style.marginLeft) + 10 + 'px';
-        }
-        if (parseInt(imageCat.style.marginLeft) >= window.innerWidth){ 
-          indo = false; // atribui falso quando ele atingir o fim da tela
-        }
-        if (!indo){    
-            imageCat.style.marginLeft = parseInt(imageCat.style.marginLeft) - 10 + 'px';
-          }
-        if (parseInt(imageCat.style.marginLeft) <= 0){
-          indo = true; // atribui verdadeiro quando ele atingir o fim da tela
-        }
-        }         
-      setInterval(catWalk, 50); // chama a função catWalk a cada 50 milissegundos
+      let move = setInterval(catWalk, 50); // chama a função catWalk a cada 50 milissegundos
 
-      // https://gifman.net/wp-content/uploads/2019/06/gato-legal-fofo-07.gif (gif para inserir)
+      function catWalk(){
+          imageCat.style.marginLeft = parseInt(imageCat.style.marginLeft) + 10 + 'px';
+
+        if (parseInt(imageCat.style.marginLeft) == 500){
+          catDance(); // chama a função que muda a imagem
+        }
+        if (parseInt(imageCat.style.marginLeft) == 1100){ 
+          catStop(); // chama a função que para a imagem
+        }
+      }
+
+      function catDance(){
+        imageCat.src = "https://gifman.net/wp-content/uploads/2019/06/gato-legal-fofo-07.gif";
+        clearInterval(move); // para a imagem
+        setTimeout(function(){ // volta com a imagem anterior depois de 10 segundos e volta a chamar a função que faz ele movimentar
+          imageCat.src = "http://www.anniemation.com/clip_art/images/cat-walk.gif";
+          move = setInterval(catWalk, 50);
+        }, 10000)
+      }
+
+      function catStop() {
+        clearInterval(move); // para a imagem;
+        let theEnd = document.createElement('h1'); // cria o texto
+        theEnd.innerText = "The end!";
+        document.querySelector('body').appendChild(theEnd); // insere no body quando para
+      }
 
 
   </script>
