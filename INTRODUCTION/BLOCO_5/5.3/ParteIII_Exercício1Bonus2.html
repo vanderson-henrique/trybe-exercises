@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Cat Walk</title>
+ </head>
+ <body>
+  
+  <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+  <script>
+ // Bônus # 2 : quando o gato alcançar o lado direito da tela, faça com que ele se mova para trás. Eles devem continuar andando para frente e para trás para todo o sempre.
+      let imageCat = document.querySelector('img');
+      imageCat.style.marginLeft = '0px';
+      let indo = true;
+      
+      function catWalk(){
+        if (indo) {
+          imageCat.style.marginLeft = parseInt(imageCat.style.marginLeft) + 10 + 'px';
+        }
+        if (parseInt(imageCat.style.marginLeft) >= window.innerWidth){ 
+          indo = false; // atribui falso quando ele atingir o fim da tela
+        }
+        if (!indo){    
+            imageCat.style.marginLeft = parseInt(imageCat.style.marginLeft) - 10 + 'px';
+          }
+        if (parseInt(imageCat.style.marginLeft) <= 0){
+          indo = true; // atribui verdadeiro quando ele atingir o fim da tela
+        }
+        }         
+      setInterval(catWalk, 50); // chama a função catWalk a cada 50 milissegundos
+
+
+
+
+  </script>
+ </body>
+</html>

@@ -89,7 +89,7 @@ maiusculo();
 function exibeParagrafo () {
   let paragrafos = document.getElementsByTagName('p');
   for (let i = 0; i < paragrafos.length; i += 1){
-  console.log(paragrafos[i].innerText);
+  console.log(`Este é o parágrafo ${i+1} ${paragrafos[i].innerText}`);
 }
 }
 exibeParagrafo();

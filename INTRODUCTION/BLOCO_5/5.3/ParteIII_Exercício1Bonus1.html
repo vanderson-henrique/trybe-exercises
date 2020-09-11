@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Cat Walk</title>
+ </head>
+ <body>
+  
+  <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+  <script>
+      /*Adicione uma tag de script na parte inferior da página, onde você colocará todo o seu código.
+        Crie uma variável para armazenar uma referência ao img.
+        Altere o estilo do imgpara ter uma "esquerda" de "0px", de forma que comece no lado esquerdo das telas.
+        Crie uma função chamada catWalk()que mova o gato 10 pixels para a direita de onde ele começou, alterando a propriedade de estilo "esquerda".
+        Chame essa função a cada 50 milissegundos. Seu gato agora deve estar se movendo pela tela da esquerda para a direita. Viva!*/
+
+      let imageCat = document.querySelector('img');
+      imageCat.style.marginLeft = '0px';
+
+      function catWalk(){
+          imageCat.style.marginLeft = parseInt(imageCat.style.marginLeft) + 10 + 'px';
+    // Bônus # 1 : Quando o gato chegar à direita da tela, reinicie-o no lado esquerdo ("0px"). Portanto, eles devem continuar andando da esquerda para a direita na tela, para todo o sempre.
+    
+          if (parseInt(imageCat.style.marginLeft) > window.innerWidth) {
+            imageCat.style.marginLeft = "0px";
+          }
+      }
+
+      setInterval(catWalk, 50); // chama a função catWalk a cada 50 milissegundos
+
+
+
+
+  </script>
+ </body>
+</html>
