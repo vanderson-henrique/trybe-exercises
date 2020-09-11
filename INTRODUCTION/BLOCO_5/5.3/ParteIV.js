@@ -22,7 +22,7 @@ function goDark() {
 function finishTheStory() {
   document.getElementById("story").innerHTML = "Então procurei cuidadosamente na masmorra úmida. Aí está você! Eu sorri com todos os meus 98 dentes brilhantes. Hora do jantar!";
 }
-
+// Inserindo eventos
 let button1 = document.querySelectorAll("button")[0];
 button1.addEventListener("click", goDark);
 
