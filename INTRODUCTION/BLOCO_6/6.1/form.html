@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de currículo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulário de cadastro de currículo</h1>
+
+    <form action="" method="get" class="form-curriculo">
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+            <div class='form-row'>
+            <label for="nome">Nome</label>
+                <input id="nome" type="text" required="required" maxlength="40">
+            </div>
+
+            <div class='form-row'>
+                <label for="email">E-mail</label>
+                <input id="email"type="email" required="required" maxlength="50">
+            </div>
+
+            <div class='form-row'>
+                <label for="cpf">CPF</label>
+                <input id="cpf" type="text" required="required" maxlength="11">
+            </div>
+
+            <div class='form-row'>
+                <label for="endereço">Endereço</label>
+                <input id="endereço" type="text" required="required" maxlength="200">
+            </div>
+
+            <div class='form-row'>
+                <label for="cidade">Cidade</label>
+                <input id="cidade" type="text" required="required" maxlength="28">
+            </div>
+
+            <div class='form-row'>
+                <label for="estado">Estado</label>
+                <select name="estado" id="estado" required="required">
+                    <option value="default">-- Selecione seu estado</option>
+            </select>
+            </div>
+
+            <div class='form-tipo'>
+                <p><em>Tipo de moradia</em></p>
+                <input name="tipo" id="tipoCasa" type="radio" required="required" value="Casa">
+                <label for="tipoCasa">Casa</label> <br>
+                <input name="tipo" id="tipoApto" type="radio" required="required" value="Apto">
+                <label for="tipoApto">Apartamento</label>
+            </div>
+    </fieldset>
+
+    <fieldset>
+            <legend>Último emprego</legend>
+            <div class='form-row'>
+                <label for="resumo">Resumo do currículo</label>
+                <textarea name="resumo" id="resumo" cols="30" rows="10" maxlength="1000" required="required"></textarea>
+            </div>
+
+            <div class='form-row'>
+                <label for="cargo">Cargo</label>
+                <input id="cargo" type="text" required="required" maxlength="40">
+            </div>
+
+            <div class='form-row'>
+                <label for="desc-cargo">Descição do cargo</label>
+                <input id="desc-cargo" type="text" required="required" maxlength="500">
+            </div>
+
+            <div class='form-row'>
+                <label for="data-inicio">Data de Início (dd/mm/aaaa)</label>
+                <input id="data-inicio" type="text" required="required" maxlength="10">
+            </div>
+
+    </fieldset>
+
+    <button type="submit" id="enviar">Enviar</button>
+</form>
+    <script src="script.js"></script>
+</body>
+</html>
