@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" class="js-form form">
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="name">Enter your name</label>
+            <input type="text" class="form__input form-control" placeholder="Enter your name" autocomplete="off" data-validate-field="name" name="name" id="name">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="email">Enter your email</label>
+            <input type="email" class="form__input form-control" placeholder="Enter your email" autocomplete="off" data-validate-field="email" name="email" id="email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Enter your password</label>
+          <input type="password" class="form__input form-control" placeholder="Enter your password" autocomplete="off" data-validate-field="password" name="password" id="password">
+        </div>
+        <div class="form-group">
+          <label for="password">Enter your text</label>
+          <textarea name="msg" cols="30" rows="10" class="form__textarea form-control" data-validate-field="text" id="text"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="checkbox" class="form__checkbox" data-validate-field="checkbox" checked><label for="checkbox">I agree</label>
+        </div>
+        <div class="form-group">
+          <label><input type="checkbox" class="form__checkbox" data-validate-field="checkbox2" checked>I agree</label>
+        </div>
+        <div class="form-group">
+          <label><input type="radio" name="radio" class="form__radio" data-validate-field="radio">Male</label>
+          <br>
+          <label><input type="radio" name="radio" class="form__radio" data-validate-field="radio">Female</label>
+        </div>
+        <button class="form__btn btn btn-primary">SUBMIT</button>
+      </form>
+      
+      <script src="dist/js/just-validate.min.js" ></script>  
+</body>
+</html>
