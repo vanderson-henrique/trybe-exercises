@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de currículo</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/dist/css/DatePickerX.min.css">
+</head>
+<body>
+    <h1 class="h1">Formulário de cadastro de currículo</h1>
+
+    <form action="" method="get" class="form-curriculo">
+    <fieldset class="form-group">
+        <legend>Dados Pessoais</legend>
+            <div class='form-row form-group'>
+            <label for="nome">Nome</label>
+                <input class='form__input form-control'id="name" name="name" type="text" data-validate-field="name">
+            </div>
+
+            <div class='form-row form-group'>
+                <label for="email">E-mail</label>
+                <input class='form-control' id="email"type="email" maxlength="50" data-validate-field="email">
+            </div>
+
+            <div class='form-row form-group'>
+                <label for="cpf">CPF</label>
+                <input class='form-control' id="cpf" type="text" data-validate-field="cpf">
+            </div>
+
+            <div class='form-row form-group'>
+                <label for="endereço">Endereço</label>
+                <input class='form-control' id="endereço" type="text" maxlength="200" data-validate-field="endereço">
+            </div>
+
+            <div class='form-row form-group'>
+                <label for="cidade">Cidade</label>
+                <input class='form-control' id="cidade" type="text" maxlength="28" data-validate-field="cidade">
+            </div>
+
+            <div class='form-row form-group'>
+                <label for="estado">Estado</label>
+                <select class='form-control' name="estado" id="estado" data-validate-field="estado">
+                    <option value="default">-- Selecione seu estado</option>
+            </select>
+            </div>
+            <br>
+            <p><em>Tipo de moradia</em></p>
+            <div class='form-check form-tipo form-group'>
+                <input class="form-check-input" name="tipo" id="tipoCasa" type="radio" value="Casa">
+                <label class="form-check-label" for="tipoCasa">Casa</label> <br>
+                <input class="form-check-input" name="tipo" id="tipoApto" type="radio" value="Apto">
+                <label class="form-check-label" for="tipoApto">Apartamento</label>
+            </div>
+    </fieldset>
+
+    <fieldset class="form-group">
+            <legend>Informações sobre o último emprego</legend>
+            <div class='form-row form-group'>
+                <label for="resumo">Resumo do currículo</label>
+                <textarea class='form-control' name="resumo" id="resumo" cols="30" rows="10" data-validate-field="resumo" maxlength="1000"></textarea>
+            </div>
+
+            <div class='form-row form-group'>
+                <label for="cargo">Cargo</label>
+                <input class='form-control' id="cargo" type="text" required="required" maxlength="40" data-validate-field="cargo">
+            </div>
+
+            <div class='form-row form-group'>
+                <label for="desc-cargo">Descição do cargo</label>
+                <input class='form-control' id="desc-cargo" type="text" maxlength="500" data-validate-field="desc">
+            </div>
+
+            <div class='form-row form-group'>
+                <label for="data-inicio">Data de Início: </label>
+                <input id="data-inicio" type="text" required="required" maxlength="10" data-validate-field="dataInicio">
+            </div>
+
+    </fieldset>
+
+    <button class="btn btn-success form__btn" type="submit" id="enviar">Enviar</button>
+    <button type="reset" class="btn btn-secondary">Limpar</button>
+</form>
+    
+    <script src="dist/js/DatePickerX.min.js"></script>
+    <script src="dist/js/just-validate.min.js" ></script>    
+    <script src="script.js"></script>
+    <script>
+       document.getElementById('data-inicio').DatePickerX.init({format:'dd/mm/yyyy'});         
+    </script>
+</body>
+</html>
