@@ -1,0 +1,14 @@
+/*
+Bem-vindo ao Flexbox Froggy, um jogo onde você ajuda Froggy e seus amigos escrevendo código CSS! Guie este sapo para a vitória-régia à direita usando a propriedade justify-content, que alinha os itens horizontalmente e aceita os seguintes valores:
+
+flex-start: os itens são alinhados à esquerda do contêiner.
+flex-end: os itens são alinhados ao lado direito do contêiner.
+center: os itens são alinhados no centro do contêiner.
+espaço entre: os itens são exibidos com espaçamento igual entre eles.
+espaço ao redor: os itens são exibidos com espaçamento igual ao redor deles.
+Por exemplo, justify-content: flex-end; irá mover o sapo para a direita.*/
+
+#pond {
+    display: flex;
+  justify-content: flex-end;
+  }
