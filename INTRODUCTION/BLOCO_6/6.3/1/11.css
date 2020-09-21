@@ -1,0 +1,7 @@
+#pond {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  }
+
+/*Quando troca o flex-direction para column, o justify-content controla no eixo vertical.*/
