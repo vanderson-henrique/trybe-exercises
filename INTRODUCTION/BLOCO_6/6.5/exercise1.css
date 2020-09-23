@@ -1,11 +1,12 @@
 body {
-
+  font-size: 2rem;
+  margin: 30px;
 }
 h1 {
-
+  font-size: 3rem;
 }
 h2 {
-
+  font-size: 2.5rem;
 }
 
 img {
@@ -13,5 +14,5 @@ img {
 }
 
 figure {
-    margin: 0;
+    margin-bottom: 30px;
 }
