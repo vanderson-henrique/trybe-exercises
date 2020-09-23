@@ -48,3 +48,46 @@ html {
  footer {
    text-align: center;
  }
+
+ @media screen and (min-width:800px) {
+   nav ul {
+     display: inline-block;
+   }
+
+   body {
+     background-color: rgb(168, 188, 226);
+   }
+
+   header {
+     display: flex;
+     justify-content: space-between;
+     margin: 30px;
+     font-size: 2.5rem;
+   }
+
+   header p {
+     font-size: 3.5rem;
+   }
+
+   .container-aside {
+     display: flex;
+     justify-content: space-between;
+   }
+
+   .aside-one ul li {
+     text-align: start;
+   }
+
+   .main-content h1 {
+     font-size: 3rem;
+   }
+
+   .main-content p {
+     font-size: 2.5rem;
+   }
+
+   footer {
+     font-size: 2.5rem;
+   }
+
+ }
