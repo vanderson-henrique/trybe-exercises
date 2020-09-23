@@ -4,3 +4,47 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
+  body {
+    font-size: 2rem;
+    background-color: burlywood;
+  }
+
+  header p {
+    font-size: 2.8rem;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .aside-one {
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .aside-two h2 {
+    text-align: center;
+  }
+
+ .main-content {
+   margin: 30px;
+ }
+
+ .main-content p {
+   text-align: justify;
+ }
+
+ .main-content h1 {
+   font-size: 2.4rem;
+   margin-top: 60px;
+ }
+
+ footer {
+   text-align: center;
+ }
