@@ -16,3 +16,21 @@ img {
 figure {
     margin-bottom: 30px;
 }
+
+@media screen and (min-width:800px){
+    body {
+      background-color: rgb(165, 129, 199);  
+      font-size: 1.8rem;
+      margin: 50px;
+    }
+
+    img {
+        width: 250px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
