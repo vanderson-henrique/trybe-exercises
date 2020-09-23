@@ -24,6 +24,9 @@ figure {
       margin: 50px;
     }
 
+    h1 {
+        font-size: 2.5rem;
+    }
     img {
         width: 250px;
     }
@@ -33,4 +36,22 @@ figure {
         flex-wrap: wrap;
     }
 
+}
+
+@media screen and (min-width:1300px) {
+    body {
+        background-color: rgb(39, 110, 25);
+        font-size: 1.5rem;
+        margin: 60px;
+        max-width: 900px;
+        text-align: justify;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
 }
