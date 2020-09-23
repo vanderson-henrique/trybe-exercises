@@ -1,0 +1,33 @@
+@media screen and (max-width:568px) {
+    .centro {
+      width: 100%;
+    }
+    .topo {
+      background-color: chartreuse;
+    }
+    .topo h1 {
+      color: red;
+    }
+  
+    .container {
+      flex-direction: column;
+    }
+  
+    .colunas {
+      width: 100%;
+    }
+  }
+
+  @media screen and (orientation:landscape) {
+    .centro {
+        background-color: gray;
+    }
+
+    .topo {
+        background-color: rgb(29, 27, 27);
+    }
+
+    .colunas {
+        background-color: rgb(90, 88, 88);
+    }
+  }
