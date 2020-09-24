@@ -1,0 +1,34 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.centro {
+  width: 90vw;
+  height: 100vh;
+  background-color: rgb(46, 44, 44);
+  margin: 0 auto;
+}
+
+.topo {
+  width: 100%;
+  height: 20%;
+  background-color: brown;
+  text-align: center;
+}
+
+.topo h1 {
+  color: white;
+  font-size: 2em;
+}
+
+.container {
+  display: flex;
+}
+
+.colunas {
+  width: 50%;
+  text-align: center;
+  background-color: salmon;
+}
+

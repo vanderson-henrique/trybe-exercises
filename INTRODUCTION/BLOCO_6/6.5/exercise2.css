@@ -1,0 +1,122 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-size: 2rem;
+    background-color: burlywood;
+  }
+
+  header p {
+    font-size: 2.8rem;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .aside-one {
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .aside-two h2 {
+    text-align: center;
+  }
+
+ .main-content {
+   margin: 30px;
+ }
+
+ .main-content p {
+   text-align: justify;
+ }
+
+ .main-content h1 {
+   font-size: 2.4rem;
+   margin-top: 60px;
+ }
+
+ footer {
+   text-align: center;
+ }
+
+ @media screen and (min-width:800px) {
+   nav ul {
+     display: inline-block;
+   }
+
+   body {
+     background-color: rgb(203, 171, 224);
+   }
+
+   header {
+     display: flex;
+     flex-direction: column;
+     margin: 30px;
+     font-size: 2.5rem;
+   }
+
+   header p {
+     font-size: 3.5rem;
+   }
+
+   nav ul {
+     display: flex;
+     justify-content: space-around;
+     background-color: rgb(158, 150, 211);
+     width: 100%;
+     height: 100px;
+    align-items: center;
+   }
+
+   .container-aside {
+     display: flex;
+     justify-content: space-between;
+   }
+
+   .aside-one ul li {
+     text-align: start;
+   }
+
+   .main-content h1 {
+     font-size: 3rem;
+   }
+
+   .main-content p {
+     font-size: 2.5rem;
+   }
+
+   footer {
+     font-size: 2.5rem;
+   }
+
+ }
+
+ @media screen and (min-width:1000px) {
+  body {
+    background-color: cornsilk;
+    margin: 50px;
+  }
+
+  nav ul {
+    background-color: rgb(202, 199, 224);
+  }
+
+  .main-content h1 {
+    font-size: 3rem;
+  }
+
+  .main-content p {
+    font-size: 1.8rem;
+  }
+
+ }
