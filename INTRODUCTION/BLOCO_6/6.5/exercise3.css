@@ -80,3 +80,51 @@
     padding: 20px;
     height: 1%;
   }
+
+  @media print {
+   #header, #navigation, #footer {
+     display: none;
+   }
+
+   #aside, #content {
+     clear: left;
+   }
+}
+
+@media screen and (max-width:360px) {
+  #aside {
+    display: none;
+  }
+
+  body {
+    padding: 0px;
+  }
+
+  #content {
+    width: 100%;
+    margin: 10px;
+  }
+
+  img {
+    width: 100%;
+    margin-right: 5px;
+  }
+
+   ul {
+    display: flex;
+    flex-direction: column;
+    }
+
+    #navigation li a {
+      border-right: none;
+    }
+
+    #header {
+      position: fixed;
+      width: 100%;
+    }
+
+    #navigation {
+      margin-top: 85px;
+    }
+}
