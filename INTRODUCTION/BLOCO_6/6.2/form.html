@@ -15,8 +15,8 @@
     <fieldset class="form-group">
         <legend>Dados Pessoais</legend>
             <div class='form-row form-group'>
-            <label for="nome">Nome</label>
-                <input class='form__input form-control'id="name" name="name" type="text" data-validate-field="name">
+            <label for="name">Nome</label>
+                <input class='form__input form-control'id="name" name="name" type="text" data-validate-field="name" placeholder="Digite aqui o seu nome">
             </div>
 
             <div class='form-row form-group'>
@@ -46,13 +46,15 @@
             </select>
             </div>
             <br>
-            <p><em>Tipo de moradia</em></p>
+            <fieldset>
+                <legend>Tipo de moradia</legend>
             <div class='form-check form-tipo form-group'>
                 <input class="form-check-input" name="tipo" id="tipoCasa" type="radio" value="Casa">
                 <label class="form-check-label" for="tipoCasa">Casa</label> <br>
                 <input class="form-check-input" name="tipo" id="tipoApto" type="radio" value="Apto">
                 <label class="form-check-label" for="tipoApto">Apartamento</label>
             </div>
+            </fieldset>
     </fieldset>
 
     <fieldset class="form-group">
@@ -74,7 +76,7 @@
 
             <div class='form-row form-group'>
                 <label for="data-inicio">Data de Início: </label>
-                <input id="data-inicio" type="text" required="required" maxlength="10" data-validate-field="dataInicio">
+                <input class='form-control' id="data-inicio" type="text" required="required" maxlength="10" data-validate-field="dataInicio">
             </div>
 
     </fieldset>

@@ -3,3 +3,8 @@ body {
     width: 100%;
     margin: auto;
 }
+
+input {
+    width: 150px;
+    box-sizing: border-box;
+}
