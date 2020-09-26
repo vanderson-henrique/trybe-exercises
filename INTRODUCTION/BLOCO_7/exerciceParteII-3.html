@@ -13,11 +13,8 @@
         let countClicks = 0;
         let p = document.getElementById('count-clicks');
         p.innerText = countClicks;
-        const buttonClick = document.getElementById('click');
-        buttonClick.addEventListener('click', () => {
-            countClicks += 1;
-            p.innerText = countClicks;
-        });
+
+        document.getElementById('click').addEventListener('click', () => p.innerText = countClicks += 1);
     </script>
 </body>
 </html>
