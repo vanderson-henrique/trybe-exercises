@@ -1,0 +1,195 @@
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .top-bar {
+    background-color: rgb(66, 103, 178);
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    justify-content: space-between;
+  }
+  
+  .facebook-logo {
+    height: 60px;
+    margin-left: 20%;
+    margin-top: 13px;
+    width: 150px;
+  }
+  
+  .facebook-login {
+    display: flex;
+    margin-right: 17%;
+    margin-top: 10px;
+  }
+  
+  .facebook-login label {
+    color: white;
+    font-size: 11px;
+    font-weight: 900;
+    padding-bottom: 3px;
+    padding-top: 10px;
+  }
+  
+  .facebook-login input {
+    border: none;
+    border-radius: 2px;
+    margin-right: 10px;
+    width: 150px;
+  }
+  
+  .facebook-login button {
+    background-color: #3a5ea6ff;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-size: 10px;
+    font-weight: 900;
+    height: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 50px;
+  }
+  
+  .facebook-login a {
+    color: #999;
+    font-size: 10px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    text-decoration: none;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-control {
+    align-self: flex-end;
+  }
+  
+  .main-content {
+    background: linear-gradient(white, #d3d8e8);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .left-content {
+    margin-left: 15%;
+    width: 800px;
+  }
+  
+  .left-content img {
+    margin-top: -10px;
+  }
+  
+  .left-content p {
+    color: #000091ff;
+    font-weight: 900;
+    line-height: 1.4;
+    margin-top: 30px;
+  }
+  
+  .right-content {
+    margin-right: 22%;
+    width: 300px;
+  }
+  
+  .name {
+    color: #333;
+    display: flex;
+    font-size: 25px;
+    font-weight: 900;
+    justify-content: space-between;
+  }
+  
+  .quick-easy {
+    color: #333;
+    font-size: 15px;
+    font-weight: 900;
+    margin-top: -13px;
+  }
+  
+  .birthday {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .genre {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .name input {
+    border: 1px solid #999;
+    border-radius: 3px;
+    font-size: 15px;
+    height: 25px;
+    margin-bottom: 10px;
+    text-indent: 7px;
+    width: 46%;
+  }
+  
+  .birthday input {
+    border: 1px solid #999;
+    border-radius: 3px;
+    font-size: 15px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-indent: 7px;
+    width: 50%;
+  }
+  
+  .phone-password input {
+    border: 1px solid #999;
+    border-radius: 3px;
+    font-size: 15px;
+    height: 25px;
+    margin-bottom: 10px;
+    text-indent: 7px;
+    width: 100%;
+  }
+  
+  .genre label {
+    color: #333;
+    font-size: 15px;
+    font-weight: 900;
+  }
+  
+  .right-content button {
+    background: linear-gradient(#67ae55, #578843);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+    height: 38px;
+    margin-top: 10px;
+    width: 190px;
+  }
+  
+  .gender-custom {
+    border: 1px solid #999;
+    border-radius: 3px;
+    font-size: 15px;
+    height: 25px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-indent: 7px;
+    width: 50%;
+  }
+  
+  .error-message {
+    color: rgb(194, 32, 32);
+  }
+  
+  .label-birthdate , .label-gender {
+    color: rgb(131, 127, 127);
+    font-size: 16px;
+    font-weight: 900;
+  }
+  
