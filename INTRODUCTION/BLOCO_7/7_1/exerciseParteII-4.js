@@ -5,10 +5,10 @@ const exchangeWord = word => phrase.replace('x', word);
 skills.sort();
 
 const mainSkills = fun1 => {
-    let result = `${fun1} Minhas cinco principais habilidades são:`
-    skills.forEach((skill, index) => 
+    let result = `${fun1} Minhas cinco principais habilidades são:`;
+    skills.forEach((skill, index, array) => 
         result = `${result}
-        * ${skill}`);
+        * ${skill} na posição ${index + 1} entre ${array.length} habilidades.`);
     
     return result;
 }
