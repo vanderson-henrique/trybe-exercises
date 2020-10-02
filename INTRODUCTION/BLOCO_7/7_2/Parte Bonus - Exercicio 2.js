@@ -56,4 +56,3 @@ return report;
 }
 
 console.log(createReport(allLessons, 'Maria Clara'));
-//console.log(Object.keys(allLessons));
