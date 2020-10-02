@@ -14,7 +14,7 @@ const lesson1 = {
   
   const lesson3 = {
     materia: 'Matemática',
-    numeroEstudantes: 10,
+    numeroEstudantes: 50,
     professor: 'Maria Clara',
     turno: 'noite',
   };
@@ -25,13 +25,14 @@ const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
 
 //console.log(allLessons);
 const studentsMath = (lesson) => {
+    const keys = Object.keys(lesson);
     let count = 0;
-    for (let i in lesson) {
-        if (Object.values(lesson[i][i]) === 'Matemática') {
-            count += 1;
+    for (let i = 0; i < keys.length; i += 1) {
+        if (lesson[keys[i]].materia === 'Matemática') {
+            count += lesson[keys[i]].numeroEstudantes;
         }
     }
     return count;
 }
-
 console.log(studentsMath(allLessons));
+//console.log(Object.keys(allLessons));

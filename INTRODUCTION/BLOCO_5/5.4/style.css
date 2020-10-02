@@ -1,0 +1,12 @@
+body {
+    margin: 10px;
+    padding: 0;
+    width: 80%;
+    text-align: center;
+    line-height: 20pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.altera {
+    text-align: start;
+}
