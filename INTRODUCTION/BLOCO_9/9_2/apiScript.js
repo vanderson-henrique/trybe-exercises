@@ -10,7 +10,6 @@ const fetchJoke = () => {
   fetch(API_URL, myObject)
   .then(response => response.json())
   .then(data => h2Joke.innerHTML = data.joke);
-
   
 };
 

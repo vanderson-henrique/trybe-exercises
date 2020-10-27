@@ -14,17 +14,6 @@ async function operationsWithNumbers() {
     throw new Error('É mais de oito mil');
 };
 
-async function returnOperations() {
-    try {
-        const numberResponse = await operationsWithNumbers();
-        const numberDivididos = await numberDivisions(numberResponse);
-        const arraySum = await somaArray(numberDivididos);
-        console.log(arraySum);
-    } catch (error) {
-        console.log(`${error}! Essa promise deve estar quebrada!`);
-    }
-}
-
 // Função para dividir o array retornado por 2, 3, 5 e 10
 async function numberDivisions(number) {
     const arrayDivisors = [2, 3, 5, 10];
@@ -39,4 +28,14 @@ async function somaArray(arrayNumber) {
     }, 0);
 };
 
+async function returnOperations() {
+    try {
+        const numberResponse = await operationsWithNumbers();
+        const numberDivididos = await numberDivisions(numberResponse);
+        const arraySum = await somaArray(numberDivididos);
+        console.log(arraySum);
+    } catch (error) {
+        console.log(`${error}! Essa promise deve estar quebrada!`);
+    }
+}
 returnOperations();
