@@ -6,4 +6,6 @@ function sum(a, b) {
   return a + b;
 }
 
+console.log(sum('a',2));
+
 module.exports = sum;
