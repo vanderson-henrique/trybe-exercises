@@ -9,7 +9,21 @@
 // reverseInt (-90) === -9
 
 function reverseInt(n) {
-
+  const stringN = n.toString();
+  let reverseNumber = "";
+  for (let i = stringN.length - 1; i >= 0; i -= 1) {
+    if (stringN.length > 1 && stringN[i] !== "0") {
+      reverseNumber += stringN[i];
+    } else {
+      reverseNumber += stringN[i];
+    }
+  }
+  if (reverseNumber[reverseNumber.length - 1] === "-") {
+    return parseInt(reverseNumber) * -1;
+  }
+  return parseInt(reverseNumber);
 }
+
+// console.log(reverseInt(-100700));
 
 module.exports = reverseInt;
