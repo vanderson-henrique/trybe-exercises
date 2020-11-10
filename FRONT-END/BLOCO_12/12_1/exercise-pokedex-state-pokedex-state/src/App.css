@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+
+.buttonType {
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  background-color:rgb(151, 230, 135);
+  border-radius: 50px;
+  border: solid 1px rgb(20, 61, 12);
+  color: black;
+  font-weight: 700;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size:15px;
+}
+
+.buttonNext {
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  background-color:rgb(151, 230, 135);
+  border-radius: 50px;
+  border: solid 1px rgb(20, 61, 12);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size:15px;
+}
