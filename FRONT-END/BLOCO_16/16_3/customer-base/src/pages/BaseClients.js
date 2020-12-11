@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { removeClientAction } from '../redux/actions/addClientAction'
 
 class BaseClients extends Component {
   render() {
     const {
       authLogin: { username, password },
     } = this.props;
-    const { listClients } = this.props;
+    const { listClients, removeClientAction } = this.props;
     const validate = () => {
       if (username !== '' && password !== '') return true;
       return false;
@@ -24,6 +25,7 @@ class BaseClients extends Component {
               {listClients.length === 0 ? <h2>Nenhum Cliente Cadastrado</h2> : listClients.map((client) => (
                 <li key={client.name}>
                   {client.name} {client.age} {client.email}
+                  <button type="button" onClick={() => removeClientAction(client.name)} >X</button>
                 </li>
               ))}
             </ul>
@@ -39,4 +41,6 @@ const mapStateToProps = (state) => ({
   listClients: state.listClientsReducer,
 });
 
-export default connect(mapStateToProps)(BaseClients);
+const mapDispatchToProps = { removeClientAction };
+
+export default connect(mapStateToProps, mapDispatchToProps)(BaseClients);
