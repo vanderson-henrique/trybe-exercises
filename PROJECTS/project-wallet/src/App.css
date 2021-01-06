@@ -1,0 +1,178 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container-header {
+  background-color: rgb(112, 230, 134);
+  display: flex;
+  font-family: Times New Roman, Times, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.container-info {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+}
+
+.container-amount {
+  display: flex;
+  justify-content: end;
+}
+
+.form {
+  background-color: rgb(72, 79, 73);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.form label {
+  color: white;
+  left: 19px;
+  margin-bottom: 0.2em;
+  margin-right: 5px;
+}
+
+.form input , select {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 0.2em;
+}
+
+.form button {
+  background: rgba(46, 105, 11, 0.952);
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+  justify-content: center;
+  padding: 0.2em 0.6em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.form-login button {
+  background: rgba(11, 38, 88, 0.952);
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  color: white;
+  cursor: auto;
+  font-size: 1.2em;
+  justify-content: center;
+  padding: 0.2em 0.6em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.form-edit button {
+  background: rgba(5, 53, 68, 0.952);
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+  justify-content: center;
+  padding: 0.2em 0.6em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.form button:hover {
+  background: rgb(30, 139, 20);
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+}
+
+.table-header {
+  height: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.table-header td {
+  max-width: 15px;
+}
+
+.table-data td {
+  background-color: rgb(241, 232, 241);
+  height: 20px;
+  max-width: 15px;
+}
+
+.table-header tr td {
+  background-color: teal;
+}
+
+.table-data {
+  height: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.form-login {
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 30px;
+  width: 100%;
+}
+
+.form-login button:disabled {
+  background: rgb(104, 109, 114);
+  text-decoration: none;
+}
+
+.container-login h1 {
+  font-family: fantasy;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.form-login input {
+  padding-right: 200px;
+}
+
+.form-edit {
+  background-color: rgb(179, 183, 185);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.form-edit label {
+  color: rgb(10, 5, 5);
+  left: 19px;
+  margin-bottom: 0.2em;
+  margin-right: 5px;
+}
+
+.form-edit input , select {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 0.2em;
+}
+
+.form-edit button:hover {
+  background: rgb(26, 130, 190);
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+}
