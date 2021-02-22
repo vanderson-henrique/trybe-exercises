@@ -1,2 +1,1 @@
-Repositório utilizado para armazenar exercícios realizados na Trybe, separados por blocos e módulos.
-Aluno: Vanderson Henrique.
+Repositório utilizado para armazenar exercícios e projetos realizados na Trybe, separados por blocos e módulos.
