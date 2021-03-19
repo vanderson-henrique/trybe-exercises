@@ -1,0 +1,15 @@
+{
+  "name": "calcula-imc",
+  "version": "1.0.0",
+  "description": "Pacote node para calcular o ICM de um usuário",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Vanderson Henrique",
+  "license": "MIT",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
