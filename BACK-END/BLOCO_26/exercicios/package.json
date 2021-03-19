@@ -10,6 +10,6 @@
   "author": "Vanderson Henrique",
   "license": "MIT",
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "inquirer": "^8.0.0"
   }
 }
