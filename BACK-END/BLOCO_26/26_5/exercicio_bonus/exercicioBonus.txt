@@ -1,0 +1,18 @@
+Como explicado em aula, o nosso desafio será criar uma chamada síncrona para mostrar dados de uma API 
+externa. (similar ao o que a gente fez no último exemplo da aula, trazendo os filmes do “Estúdio Ghibli”,
+ mas que no caso era uma chamada assíncrona)
+
+Objetivo:
+Exibir o nome dos personagens de StartWars em uma lista (pode customizar da maneira que achar melhor).
+
+Requisitos:
+Usar a biblioteca axios para fazer a requisição externa;
+Fazer a requisição de forma síncrona (usando o async/await);
+Utilizar o seguinte endpoint para obter os resultados: https://swapi-trybe.herokuapp.com/api/people/?format=json
+Sempre se preocupar com o tratamento de erros (utilizando o catch);
+
+Requisitos bônus:
+Separar o fluxo em duas funções:
+getAllCharacters(): que irá buscar os personagens, armazenar em uma variável, e retornar essa variável;
+run(): que irá iterar sobre os dados trazidos da API externa e imprimir usando o console.log;
+Além do nome do personagem, exibir o índice dele dentro do array.
