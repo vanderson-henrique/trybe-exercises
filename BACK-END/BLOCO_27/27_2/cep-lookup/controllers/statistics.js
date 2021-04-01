@@ -1,6 +1,9 @@
+const { Router } = require('express');
 const statisticServices = require('../services/statistics');
 
-const statistics = async (req, res) => {
+const router = new Router();
+
+router.get('/', async (req, res) => {
   const { uf, cidade } = req.query;
 
   if (uf) {
@@ -14,6 +17,6 @@ const statistics = async (req, res) => {
     if (!dataCity) return res.status(404).json({ message: 'Cidade não consta nas estatísticas' });
     return res.status(200).json(dataCity)
   }
-}
+})
 
-module.exports = statistics;
+module.exports = router;

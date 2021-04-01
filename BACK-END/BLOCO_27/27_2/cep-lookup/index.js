@@ -1,14 +1,13 @@
 require('dotenv').config();
 const express = require('express');
 
-const lookupCep = require('./controllers/lookupCep');
-const validaCEP = require('./middlewares/validaCEP');
-const statistics = require('./controllers/statistics');
+const routerLookupCep = require('./controllers/lookupCep');
+const routerStatistics = require('./controllers/statistics');
 
 const app = express();
 
-app.get('/lookup', validaCEP, lookupCep);
-app.get('/statistic', statistics);
+app.use('/lookup', routerLookupCep);
+app.use('/statistic', routerStatistics);
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
