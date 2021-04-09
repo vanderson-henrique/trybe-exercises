@@ -8,11 +8,14 @@ const app = express();
 const upload = multer({ dest: 'uploads' });
 
 // Caso o arquivo ou o nome não sejam enviados, a API deve retornar erro com status 422 - UNPROCESSABLE ENTITY .
-const verifyData = (req, res, next) => {
+const verifyData = async (req, res, next) => {
   const { file } = req;
   const { fileName } = req.body;
 
   if (!file || !fileName) {
+    // Se o arquivo vier com alguma informação faltando, ele é removido da pasta através do nome
+    // gerado pelo multer
+    await fs.unlink(`uploads/${req.file.filename}`);
     next({ status: 422, message: 'Arquivo e nome devem ser enviados' })
   }
   next();
