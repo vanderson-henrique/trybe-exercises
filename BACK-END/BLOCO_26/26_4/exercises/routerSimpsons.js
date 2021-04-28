@@ -31,7 +31,7 @@ router.get('/:id', rescue( async (req, res) => {
 }))
 
 // Exercício 9
-/* router.post('/simpsons', rescue( async (req, res) => {
+/* router.post('/', rescue( async (req, res) => {
   const result = await readSimpsonsFile();
   const { id, name } = req.body;
   if (!id || !name) res.status(400).send('Informe o Id e o nome do persnagem');

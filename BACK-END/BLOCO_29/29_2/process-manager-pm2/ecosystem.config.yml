@@ -1,0 +1,20 @@
+apps:
+  - name: hello-world
+    script: ./index.js
+    watch: ./
+    exec_mode: cluster
+    instances: 2
+    max_memory_restart: 100M
+    env_prod:
+      AMBIENTE: PRODUÇÃO
+    env_homolog:
+      AMBIENTE: HOMOLOG
+  - name: hello-world2
+    script: ./index.js
+    watch: true
+    exec_mode: cluster
+    instances: 2
+    env_prod:
+      AMBIENTE: AQUI É O SEGUNDO PROCESSO RODANDO NO AMBIENTE DE PRODUÇÃO
+    env_homolog:
+      AMBEINTE: AQUI É O SEGUNDO PROCESSO RODANDO NO AMBINETE DE HOMOLOG
