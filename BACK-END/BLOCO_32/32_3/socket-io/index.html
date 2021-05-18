@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO - trybe</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font: 13px Helvetica, Arial;
+      }
+      form {
+        background: #000;
+        padding: 3px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      form input {
+        border: 0;
+        padding: 10px;
+        width: 90%;
+        margin-right: 0.5%;
+      }
+      form button {
+        width: 9%;
+        background: rgb(130, 224, 255);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+      #mensagens {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      #mensagens li {
+        padding: 5px 10px;
+      }
+      #mensagens li:nth-child(odd) {
+        background: #eee;
+      }
+    </style>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
+  </head>
+  <body>
+    <ul id="mensagens"></ul>
+    <form action="">
+      <input id="mensagemInput" autocomplete="off" /><button>Send</button>
+    </form>
+    <script>
+      // Por padrão ele irá se conectat na porta que o chamou (http://localhost:3000), caso precise
+      // conectá-lo em outra porta -> const socket = io('http://localhost:5000')
+      const socket = io();
+      // Pega o que foi digitado no form e envia para o servidor (socket.emit) através do evento
+      // (mensagem) passando como segundo parametro a propria mensagem
+      const form = document.querySelector('form')
+      const inputMessage = document.querySelector('#mensagemInput')
+      form.addEventListener('submit', (e) => {
+       e.preventDefault();
+        socket.emit('mensagem', inputMessage.value);
+        inputMessage.value = ''
+        return false;
+      });
+      // Cria uma li e coloca como filho da ul com uma mensagem recebida por parametro
+      const createMessage = (message) => {
+        const messageUl = document.querySelector('#mensagens');
+        const li = document.createElement('li');
+        li.innerText = message;
+        messageUl.appendChild(li);
+      }
+      // Aqui ele fica escutando quando o evento 'ola' for emitido pelo servidor, e quando acontecer
+      // ele pega a mensagem e passa como parâmetro para a função createMessage gerar a li e renderizar
+      socket.on('ola', (mensagem) => createMessage(mensagem));
+
+      // Aqui ele está sendo recebido em forma de objeto, e como foi usado o broadcast na implementação
+      // do evento, o cliente que enviou, não irá recebê-lo
+      socket.on('mensagemServer', ({ mensagem }) => createMessage(mensagem));
+    </script>
+  </body>
+</html>

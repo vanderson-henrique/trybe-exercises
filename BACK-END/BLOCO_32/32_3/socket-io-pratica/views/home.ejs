@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrybeChat</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font: 13px Helvetica, Arial;
+    }
+    form {
+      background: #000;
+      padding: 3px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    form input {
+      border: 0;
+      padding: 10px;
+      width: 90%;
+      margin-right: 0.5%;
+    }
+    form button {
+      width: 9%;
+      background: rgb(130, 224, 255);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    #mensagens {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    #mensagens li {
+      padding: 5px 10px;
+    }
+    #mensagens li:nth-child(odd) {
+      background: #eee;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
+</head>
+<body>
+  <h1>TrybeChat</h1>
+  <ul id="mensagens"></ul>
+    <form action="">
+      <input id="mensagemInput" autocomplete="off" /><button>Send</button>
+    </form>
+  <script>
+    const socket = io();
+    const form = document.querySelector('form');
+    const inputMessage = document.querySelector('#mensagemInput');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      socket.emit('message', inputMessage.value);
+      inputMessage.value = '';
+      return false;
+    });
+
+    const createMessage = (message) => {
+      const messageUl = document.querySelector('#mensagens');
+      const li = document.createElement('li');
+      li.innerText = message;
+      messageUl.appendChild(li);
+    };
+
+    socket.on('initialMessage', ({ message }) => createMessage(message));
+    socket.on('serverMessage', ({ message }) => createMessage(message));
+  </script>
+</body>
+</html>

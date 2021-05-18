@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+  <h1>TrybeChat - Login</h1>
+  <form action="/nick" method="POST">
+    <label htmlFor="nickname">Nickname</label>
+    <input id="nickname" name="nickname" type="text"/>
+    <button type="submit">Send</button>
+  </form>
+  <!-- <script>
+    const form = document.querySelector('form');
+    const nickname = document.querySelector('#nicknameInput');
+    form.addEventListener('submit', (e) => {
+      // e.preventDefault();
+      window.location.href = "http://localhost:3000/chat"
+    })
+  </script> -->
+</body>
+</html>
