@@ -1,8 +1,9 @@
 class Deque:
     FIRST_ELEMENT = 0
 
-    def __init__(self):
+    def __init__(self, limit=10):
         self._data = []
+        self.limit = limit
 
     def __len__(self):
         return len(self._data)
@@ -12,11 +13,17 @@ class Deque:
 
     def push_front(self, value):
         # Adiciona o elemento na posição 0 (FIRST_ELEMENT)
-        self._data.insert(self.FIRST_ELEMENT, value)
+        if self.limit > self.__len__():
+            self._data.insert(self.FIRST_ELEMENT, value)
+        else:
+            raise Exception('Overflow')
 
     def push_back(self, value):
         # Adiciona ao final da lista
-        self._data.append(value)
+        if self.limit > self.__len__():
+            self._data.append(value)
+        else:
+            raise Exception('Overflow')
 
     def pop_front(self):
         # Remove o primeiro elemento (índice 0) caso existam elementos na lista
@@ -64,7 +71,7 @@ class Deque:
 
 
 if __name__ == "__main__":
-    deque = Deque()
+    deque = Deque(20)
     elements_1 = [6, 7, 8, 9, 10]
     elements_2 = [1, 2, 3, 4, 5]
 
@@ -90,3 +97,7 @@ if __name__ == "__main__":
     # print(deque.exists(7))
     print(deque)
     print(deque.peek(0, 'asc'))
+    deque.push_back(100)
+    deque.push_back(105)
+    deque.push_back(101)
+    print(deque)
